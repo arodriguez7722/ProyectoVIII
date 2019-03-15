@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ul class="sidebar-menu tree" data-widget="tree">
+        <li>
+            <p:link outcome="/index.xhtml">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+            </p:link>
+        </li>
+        <li>
+            <a href="https://www.google.com/" target="_blank">
+                <i class="fa fa-book"></i>
+                <span>Documentacion</span>
+            </a>
+        </li>
+        <li>
+            <p:link outcome="/pages/analytics/analytics.xhtml">
+                <i class="fa fa-pie-chart"></i>
+                <span>Analisis</span>
+            </p:link>
+        </li>
+
+        <li class="header">
+            General
+        </li> 
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Empresas</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">           
+                <li>
+                    <p:link outcome="/pages/Empresa/Empresa.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Empresas</span>
+                    </p:link>
+                </li>                
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Usuarios</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Usuarios/Usuarios.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Usuarios</span>
+                    </p:link>
+                </li>                
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Clientes</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Clientes/Clientes.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Clientes</span>
+                    </p:link>
+                </li>
+                
+            </ul>
+        </li>
+
+
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Vehiculos</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Vehiculos/Vehiculo.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Vehiculos</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Tarifas</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Tarifas/Tarifas.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Tarifas</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Cupos</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Cupos/Cupos.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Cupos</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Parqueadero</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Parqueadero/Parqueadero.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Parqueaderos</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Convenios</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Convenios/Convenios.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Convenios</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+        
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Facturas</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Facturas/ReimpresionAnulacion.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Reimpresion y Anulacion de Facturas</span>
+                    </p:link>
+                </li>
+                <li>
+                    <p:link outcome="/pages/Facturas/DetalleFactura.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Detalle de Factura</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+
+        <li class="treeview" >
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Contratos</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages/Contratos/Contratos.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Registro de Contratos</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- platilla para crear nuevos enlaces de navegacion-->
+
+        <!--        
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>Nombre explicito del modulo relacional</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu"> 
+                <li>
+                    <p:link outcome="/pages//.xhtml">
+                        <i class="fa fa-edit"></i>
+                        <span>Nombre del modulo</span>
+                    </p:link>
+                </li>
+            </ul>
+        </li>
+        -->
+
+    </ul>
+
+</ui:composition>

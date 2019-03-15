@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <display-name>ParkingWord1.0-ear</display-name>
+  <module>
+    <ejb>ParkingWord1.0-ejb-1.0.0-RC18.jar</ejb>
+  </module>
+  <module>
+    <web>
+      <web-uri>ParkingWord1.0-web-1.0.0-RC18.war</web-uri>
+      <context-root>/ParkingWord1.0-web</context-root>
+    </web>
+  </module>
+  <library-directory>lib</library-directory>
+</application>
