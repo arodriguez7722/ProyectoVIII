@@ -93,7 +93,188 @@
 
     
     <ui:define name="body">           
-          
+         <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="frmCrearTarifa" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Tipo de vehiculo" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{tarifasMB.tarifa.idtipoVehiculo.idtipoVehiculo}">
+                                                <f:selectItem itemLabel="Tipo de Vehiculo" itemValue=""/>
+                                                <f:selectItems value="#{tipoVehiculoMB.listaTipoVehiculo}" var="TV" 
+                                                               itemLabel="#{TV.tipoVehiculo}" itemValue="#{TV.idtipoVehiculo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>   
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Valor por Minuto" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{tarifasMB.tarifa.valorMinuto}" pt:required="true" pt:placeholder="Valor por Minuto" styleClass="text100" />
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Valor Hora" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{tarifasMB.tarifa.valorHora}" pt:required="true" pt:placeholder="Valor Hora" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Valor Dia" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{tarifasMB.tarifa.valorDia}" pt:required="true" pt:placeholder="Valor Dia" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Valor Noche" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{tarifasMB.tarifa.valorNoche}" pt:required="true" pt:placeholder="Valor Noche" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Valor Mes Diurno" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{tarifasMB.tarifa.valorMesDiurno}" pt:required="true" pt:placeholder="Valor Mes Diurno" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Valor Mes Nocturno" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{tarifasMB.tarifa.valorMesNocturna}" pt:required="true" pt:placeholder="Valor Mes Nocturno" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Estado" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{tarifasMB.tarifa.estado}">
+                                                <f:selectItem itemLabel="Estado" itemValue=""/>
+                                                <f:selectItem itemLabel="Activo" itemValue="Activo"/>
+                                                <f:selectItem itemLabel="Inactivo" itemValue="Inactivo"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 15px; margin-top: 40px">
+                                    <div class="form-group col-sm-6">
+                                        <div class="col-sm-4">
+                                            
+                                            
+                                            <p:commandButton value="Guardar" id="guardar" update=":frmCrearTarifa :tbVerTarifas" ignoreAutoUpdate="true"
+                                                             actionListener="#{tarifasMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+                                            
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":frmCrearTarifa " ignoreAutoUpdate="true"
+                                                             actionListener="#{tarifasMB.cancel()}" styleClass="btn-primary btn-block"/>
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="tbVerTarifas" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Tarifas Registradas</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="tar" 
+                                         value="#{tarifasMB.listaTarifa}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="10"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->
+
+                                <p:column headerText="Tipo Vehiculo">
+                                    <h:outputText value="#{tar.idtipoVehiculo.tipoVehiculo}"/>
+                                </p:column>
+
+                                <p:column headerText="Valor Hora">
+                                    <h:outputText value="#{tar.valorHora}"/>
+                                </p:column>
+
+                                <p:column headerText="Valor Noche">
+                                    <h:outputText value="#{tar.valorNoche}"/>
+                                </p:column>
+                                <p:column headerText="Valor Mes Diurno">
+                                    <h:outputText value="#{tar.valorMesDiurno}"/>
+                                </p:column>
+                                <p:column headerText="Estado">
+                                    <h:outputText value="#{tar.estado}"/>                                
+                                </p:column>
+                                <p:column headerText="Editar">
+                                    <p:commandButton value="Editar" id="editar" update=":frmCrearTarifa" ignoreAutoUpdate="true"
+                                                     ajax="false" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{tarifasMB.tarifa}" value="#{tar}"/>
+                                    </p:commandButton>                                
+                                </p:column>
+                                <p:column headerText="Eliminar">
+                                    <p:commandButton value="Eliminar" id="eliminar" update=":frmCrearTarifa :tbVerTarifas" ignoreAutoUpdate="true"
+                                                     action="#{tarifasMB.deleteTarifa()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{tarifasMB.tarifa}" value="#{tar}"/>
+                                    </p:commandButton>                               
+                                </p:column>
+                            </p:dataTable>
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>     
     </ui:define>
     
 </ui:composition>
