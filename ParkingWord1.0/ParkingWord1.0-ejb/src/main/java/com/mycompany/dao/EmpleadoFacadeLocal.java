@@ -30,4 +30,8 @@ public interface EmpleadoFacadeLocal {
 
     int count();
     
+    Empleado iniciarSesion(Empleado emp);
+    
+    List<Empleado> findEmpleadoInicio(Empleado emp);
+    
 }

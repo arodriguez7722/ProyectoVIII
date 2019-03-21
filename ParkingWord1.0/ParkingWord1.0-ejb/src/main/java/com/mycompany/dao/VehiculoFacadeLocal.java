@@ -32,4 +32,10 @@ public interface VehiculoFacadeLocal {
     
     List<Vehiculo> findVehiculosPorCliente(int idPersona);
     
+    List<String> findLikePlaca(String placa);
+    
+    List<Vehiculo> objectVehiculo(String placa);
+    
+    Vehiculo vehiculoSegunCliente(String placa);
+    
 }

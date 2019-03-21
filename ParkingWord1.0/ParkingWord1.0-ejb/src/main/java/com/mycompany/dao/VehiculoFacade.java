@@ -5,6 +5,7 @@
  */
 package com.mycompany.dao;
 
+import com.mycompany.entity.Persona;
 import com.mycompany.entity.Vehiculo;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -39,5 +40,47 @@ public class VehiculoFacade extends AbstractFacade<Vehiculo> implements Vehiculo
         
         return listaVehPorCliente;
     }
+
+    @Override
+    public List<String> findLikePlaca(String placa) {
+        List<String> listaPlaca;
+        
+        Query query = em.createNativeQuery("select placa from vehiculo where placa like '"+placa+"%'");
+        
+        listaPlaca = query.getResultList();
+        
+        return listaPlaca;
+    }
+
+    @Override
+    public List<Vehiculo> objectVehiculo(String placa) {
+        List<Vehiculo> listaVehiculo;        
+        Query query = em.createNativeQuery("select * from Vehiculo  where placa = '"+placa+"'", Persona.class);
+        listaVehiculo = query.getResultList();
+        
+        return listaVehiculo;
+    }
+
+    @Override
+    public Vehiculo vehiculoSegunCliente(String placa) {
+        Vehiculo vehiculoSegunCliente = null;
+        String consulta;
+        try {
+            consulta = "SELECT v FROM Vehiculo v where e.placa = ?1 ";
+            Query query = em.createQuery(consulta);
+            query.setParameter(1, placa);
+            
+            
+            List<Vehiculo> vehiculo = query.getResultList();
+            
+            if (!vehiculo.isEmpty()) {
+                vehiculoSegunCliente = vehiculo.get(0);
+            }
+        } catch (Exception e) {
+        }
+        
+        return vehiculoSegunCliente;
+    }
+    
     
 }

@@ -6,7 +6,6 @@
 package com.mycompany.entity;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,11 +14,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -32,15 +29,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "PerfilEmpleado.findAll", query = "SELECT p FROM PerfilEmpleado p")
     , @NamedQuery(name = "PerfilEmpleado.findByIdPerfilEmpleado", query = "SELECT p FROM PerfilEmpleado p WHERE p.idPerfilEmpleado = :idPerfilEmpleado")
     , @NamedQuery(name = "PerfilEmpleado.findByPerfilEmpleado", query = "SELECT p FROM PerfilEmpleado p WHERE p.perfilEmpleado = :perfilEmpleado")
-    , @NamedQuery(name = "PerfilEmpleado.findByEmpresa", query = "SELECT p FROM PerfilEmpleado p WHERE p.empresa = :empresa")
-    , @NamedQuery(name = "PerfilEmpleado.findByRegistroEmpresa", query = "SELECT p FROM PerfilEmpleado p WHERE p.registroEmpresa = :registroEmpresa")
-    , @NamedQuery(name = "PerfilEmpleado.findByDetalleEmpresa", query = "SELECT p FROM PerfilEmpleado p WHERE p.detalleEmpresa = :detalleEmpresa")
-    , @NamedQuery(name = "PerfilEmpleado.findByUsuario", query = "SELECT p FROM PerfilEmpleado p WHERE p.usuario = :usuario")
-    , @NamedQuery(name = "PerfilEmpleado.findByRegistroUsuario", query = "SELECT p FROM PerfilEmpleado p WHERE p.registroUsuario = :registroUsuario")
-    , @NamedQuery(name = "PerfilEmpleado.findByDetalleUsuario", query = "SELECT p FROM PerfilEmpleado p WHERE p.detalleUsuario = :detalleUsuario")
-    , @NamedQuery(name = "PerfilEmpleado.findByClientes", query = "SELECT p FROM PerfilEmpleado p WHERE p.clientes = :clientes")
-    , @NamedQuery(name = "PerfilEmpleado.findByRegistroClientes", query = "SELECT p FROM PerfilEmpleado p WHERE p.registroClientes = :registroClientes")
-    , @NamedQuery(name = "PerfilEmpleado.findByDetalleClientes", query = "SELECT p FROM PerfilEmpleado p WHERE p.detalleClientes = :detalleClientes")})
+    , @NamedQuery(name = "PerfilEmpleado.findByDescripcion", query = "SELECT p FROM PerfilEmpleado p WHERE p.descripcion = :descripcion")})
 public class PerfilEmpleado implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -52,26 +41,9 @@ public class PerfilEmpleado implements Serializable {
     @Size(max = 45)
     @Column(name = "perfil_empleado")
     private String perfilEmpleado;
-    @Column(name = "empresa")
-    private Boolean empresa;
-    @Column(name = "registroEmpresa")
-    private Boolean registroEmpresa;
-    @Column(name = "detalleEmpresa")
-    private Boolean detalleEmpresa;
-    @Column(name = "usuario")
-    private Boolean usuario;
-    @Column(name = "registroUsuario")
-    private Boolean registroUsuario;
-    @Column(name = "detalleUsuario")
-    private Short detalleUsuario;
-    @Column(name = "clientes")
-    private Boolean clientes;
-    @Column(name = "registroClientes")
-    private Boolean registroClientes;
-    @Column(name = "detalleClientes")
-    private Boolean detalleClientes;
-    @OneToMany(mappedBy = "idPerfilEmpleado")
-    private List<Empleado> empleadoList;
+    @Size(max = 256)
+    @Column(name = "descripcion")
+    private String descripcion;
 
     public PerfilEmpleado() {
     }
@@ -96,85 +68,12 @@ public class PerfilEmpleado implements Serializable {
         this.perfilEmpleado = perfilEmpleado;
     }
 
-    public Boolean getEmpresa() {
-        return empresa;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setEmpresa(Boolean empresa) {
-        this.empresa = empresa;
-    }
-
-    public Boolean getRegistroEmpresa() {
-        return registroEmpresa;
-    }
-
-    public void setRegistroEmpresa(Boolean registroEmpresa) {
-        this.registroEmpresa = registroEmpresa;
-    }
-
-    public Boolean getDetalleEmpresa() {
-        return detalleEmpresa;
-    }
-
-    public void setDetalleEmpresa(Boolean detalleEmpresa) {
-        this.detalleEmpresa = detalleEmpresa;
-    }
-
-    public Boolean getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Boolean usuario) {
-        this.usuario = usuario;
-    }
-
-    public Boolean getRegistroUsuario() {
-        return registroUsuario;
-    }
-
-    public void setRegistroUsuario(Boolean registroUsuario) {
-        this.registroUsuario = registroUsuario;
-    }
-
-    public Short getDetalleUsuario() {
-        return detalleUsuario;
-    }
-
-    public void setDetalleUsuario(Short detalleUsuario) {
-        this.detalleUsuario = detalleUsuario;
-    }
-
-    public Boolean getClientes() {
-        return clientes;
-    }
-
-    public void setClientes(Boolean clientes) {
-        this.clientes = clientes;
-    }
-
-    public Boolean getRegistroClientes() {
-        return registroClientes;
-    }
-
-    public void setRegistroClientes(Boolean registroClientes) {
-        this.registroClientes = registroClientes;
-    }
-
-    public Boolean getDetalleClientes() {
-        return detalleClientes;
-    }
-
-    public void setDetalleClientes(Boolean detalleClientes) {
-        this.detalleClientes = detalleClientes;
-    }
-
-    @XmlTransient
-    public List<Empleado> getEmpleadoList() {
-        return empleadoList;
-    }
-
-    public void setEmpleadoList(List<Empleado> empleadoList) {
-        this.empleadoList = empleadoList;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     @Override
