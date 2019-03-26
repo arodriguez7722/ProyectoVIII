@@ -93,6 +93,317 @@
 
 
     <ui:define name="body">
-        
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="crearUsuario" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <h:outputLabel value="Tipo de Identificacion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{usuariosMB.empleado.persona.idTipoDocPersona.idTipoDocPersona}">
+                                                <f:selectItem itemLabel="Tipo de Identificacion" itemValue=""/>
+                                                <f:selectItems value="#{tipoDocumentoMB.listaTipoDoc}" var="TDoc" 
+                                                               itemLabel="#{TDoc.tipoDocumento}" itemValue="#{TDoc.idTipoDocPersona}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Identificacion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.identificacion}" pt:required="true" pt:placeholder="Identificacion" styleClass="text100" />
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Nombre" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.nombres}" pt:required="true" pt:placeholder="Nombre" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Apellido" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.apellidos}" pt:required="true" pt:placeholder="Apellido" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Fecha de Nacimiento" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.fechaNacimiento}" pt:type="date" pt:required="true" pt:placeholder="dd/MM/yyyy" styleClass="text100" >
+                                                <f:convertDateTime pattern="yyyy-MM-dd"/>
+                                            </p:inputText>                                              
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Lugar de Nacimiento" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{usuariosMB.empleado.persona.idLugarNacPersona.idLugarNacPersona}">
+                                                <f:selectItem itemLabel="Lugar de Nacimiento" itemValue=""/>
+                                                <f:selectItems value="#{lugarNacimientoMB.listaLugarNac}" var="LNac" 
+                                                               itemLabel="#{LNac.lugarNacimiento}" itemValue="#{LNac.idLugarNacPersona}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Direccion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.direccion}" pt:required="true" pt:placeholder="Direccion" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Celular" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.celular}" pt:required="true" pt:placeholder="Celular" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 30px">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Emai" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.persona.email}" pt:required="true" pt:placeholder="Emai" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Estado" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{usuariosMB.empleado.persona.estado}">
+                                                <f:selectItem itemLabel="Estado" itemValue=""/>
+                                                <f:selectItem itemLabel="Activo" itemValue="Activo"/>
+                                                <f:selectItem itemLabel="Inactivo" itemValue="Inactivo"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Especificos</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel  value="Usuario" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+
+                                            <p:inputText disabled="true" value="#{usuariosMB.empleado.usuario}" pt:required="true" pt:placeholder="Usuario" styleClass="text100" />
+                                        </div>
+                                    </div>   
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Password" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.pass}" pt:required="true" pt:placeholder="Password" styleClass="text100" />
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Perfil Usuario" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{usuariosMB.empleado.idPerfilEmpleado.idPerfilEmpleado}">
+                                                <f:selectItem itemLabel="Perfil usuario" itemValue=""/>
+                                                <f:selectItems value="#{perfilMB.listaPerfil}" var="perf" 
+                                                               itemLabel="#{perf.perfilEmpleado}" itemValue="#{perf.idPerfilEmpleado}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Fecha Creacion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.fechaCreacion}" pt:type="date" pt:required="true" pt:placeholder="dd/MM/yyyy" styleClass="text100" >
+                                                <f:convertDateTime pattern="yyyy-MM-dd"/>
+                                            </p:inputText>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Fecha Modificacion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.fechaModificacion}" pt:type="date" pt:required="true" pt:placeholder="dd/MM/yyyy" styleClass="text100" >
+                                                <f:convertDateTime pattern="yyyy-MM-dd"/>
+                                            </p:inputText>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Area Operativa" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{usuariosMB.empleado.idAreaEmpleado.idAreaEmpleado}">
+                                                <f:selectItem itemLabel="Area Operativa" itemValue=""/>
+                                                <f:selectItems value="#{areaMB.listaArea}" var="area" 
+                                                               itemLabel="#{area.areaEmpleado}" itemValue="#{area.idAreaEmpleado}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Turno" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{usuariosMB.empleado.idTurnoEmpleado.idTurnoEmpleado}">
+                                                <f:selectItem itemLabel="Turno Empleado"/>
+                                                <f:selectItems value="#{turnoMB.listaTurno}" var="T" 
+                                                               itemLabel="#{T.turnoEmpleado}" itemValue="#{T.idTurnoEmpleado}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Direccion Porteria" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{usuariosMB.empleado.direccionPorteria}" pt:required="true" pt:placeholder="Direccion Porteria" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row" style="margin-bottom: 15px; margin-top: 40px">
+                                    <div class="form-group col-sm-6">
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Guardar" id="guardar" update=":crearUsuario :verUsuarios" ignoreAutoUpdate="true"
+                                                             actionListener="#{usuariosMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":crearUsuario :verUsuarios" ignoreAutoUpdate="true"
+                                                             actionListener="#{usuariosMB.cancel()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                    </div>
+                                </div>  
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="verUsuarios" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Usuarios Registrados</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="emp" 
+                                         value="#{usuariosMB.listaEmpleado}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="5"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->  
+                                <p:column headerText="Nombres">
+                                    <h:outputText value="#{emp.persona.nombres}"/>
+                                </p:column>
+
+                                <p:column headerText="Apellidos">
+                                    <h:outputText value="#{emp.persona.apellidos}"/>
+                                </p:column>
+
+                                <p:column headerText="Email">
+                                    <h:outputText value="#{emp.persona.email}"/>
+                                </p:column>
+                                <p:column headerText="Usuario">
+                                    <h:outputText value="#{emp.usuario}"/>
+                                </p:column>
+                                <p:column headerText="Tipo">
+                                    <h:outputText value="#{emp.idPerfilEmpleado.perfilEmpleado}"/>                                
+                                </p:column>
+                                <p:column headerText="Estado">
+                                    <h:outputText value="#{emp.persona.estado}"/>
+                                </p:column>
+                                <p:column headerText="Detalle">
+                                    <p:commandButton value="Detalles" id="detalles"  ignoreAutoUpdate="true" update=":frmdetalleUsuario" ajax="false"
+                                                     action="#{usuariosMB.detalleUsuario()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{usuariosMB.empleado}" value="#{emp}"/>
+                                    </p:commandButton>
+                                </p:column>
+                                <p:column headerText="Editar">
+                                    <p:commandButton value="Editar" id="editar" update=":crearUsuario :verUsuarios" ignoreAutoUpdate="true"
+                                                     ajax="false" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{usuariosMB.empleado}" value="#{emp}"/>
+                                    </p:commandButton>
+
+                                </p:column>
+                                <p:column headerText="Eliminar">
+                                    <p:commandButton value="Eliminar" id="eliminar" update=":crearUsuario :verUsuarios" ignoreAutoUpdate="true"
+                                                     action="#{usuariosMB.deleteUsuario()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{usuariosMB.empleado}" value="#{emp}"/>
+                                    </p:commandButton>
+
+                                </p:column>
+
+                            </p:dataTable>
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
     </ui:define>
 </ui:composition>

@@ -1,83 +1,86 @@
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ContratoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ParqueaderoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoContratoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Convenio.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\VehiculoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PagoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\LugarNacPersonaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ConvenioFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TarifaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoComprobanteFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ColorVehiculoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PerfilEmpleadoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ReservaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ParqueaderoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoComprobanteFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\CupoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\FacturaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PersonaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MarcaVehiculoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MedidasCupoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\CupoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PisoCupoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\AreaEmpleado.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\github\adminfaces\NewSessionBean.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoVehiculoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoDocPersona.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\AreaEmpleadoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ModeloVehiculoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Cupo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Factura.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Persona.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ModeloVehiculoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Parqueadero.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpresaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\MarcaVehiculo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoCupoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoDocPersonaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Tarifa.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\FacturaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ClienteFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoComprobante.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MarcaVehiculoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\ColorVehiculo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ContratoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PisoCupoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TurnoEmpleadoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpleadoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\ModeloVehiculo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpresaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\VehiculoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\PisoCupo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ReservaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PerfilEmpleadoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PagoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Empresa.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PersonaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\AreaEmpleadoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Vehiculo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpleadoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\AbstractFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Pago.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TurnoEmpleadoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoDocPersonaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Reserva.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ConvenioFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ColorVehiculoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Cliente.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Contrato.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\LugarNacPersonaFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoContratoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\MedidasCupo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TarifaFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\PerfilEmpleado.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TurnoEmpleado.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MedidasCupoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoVehiculoFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoCupo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ClienteFacadeLocal.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoCupoFacade.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Empleado.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoContrato.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoVehiculo.java
-C:\Users\Andres\Videos\Copias de Seguridad\Template Modular\Template Modular Usuario\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\LugarNacPersona.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TarifaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TarifaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TurnoEmpleadoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Persona.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\AbstractFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoCupoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ParqueaderoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TurnoEmpleadoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\AreaEmpleadoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ContratoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MarcaVehiculoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Cupo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ConvenioFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ClienteFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoCupo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ReservaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpleadoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\ColorVehiculo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ColorVehiculoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoVehiculo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoComprobante.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\AreaEmpleadoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PisoCupoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Pago.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Empresa.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\github\adminfaces\NewSessionBean.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\VehiculoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ConvenioFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Reserva.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoCupoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\PisoCupo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Tarifa.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\MedidasCupo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\VehiculoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Cliente.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoContratoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpresaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ModeloVehiculoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Convenio.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoVehiculoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PagoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PagoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Contrato.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ParqueaderoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ModeloVehiculoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoVehiculoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PersonaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoDocPersona.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\PerfilMenu.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\ModeloVehiculo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoComprobanteFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PersonaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\PerfilEmpleado.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\CupoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MedidasCupoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\LugarNacPersonaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TurnoEmpleado.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\TipoContrato.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpresaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Empleado.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Factura.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ContratoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PerfilEmpleadoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\CupoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MarcaVehiculoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ColorVehiculoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\MedidasCupoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoDocPersonaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\EmpleadoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\FacturaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Vehiculo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\LugarNacPersonaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\AreaEmpleado.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Menu.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\FacturaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoDocPersonaFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\LugarNacPersona.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\MarcaVehiculo.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PerfilEmpleadoFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\PisoCupoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ClienteFacadeLocal.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoContratoFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\SubMenu.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\entity\Parqueadero.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\ReservaFacade.java
+C:\Users\Jaider\Documents\GIT\ProyectoVIII\ParkingWord1.0\ParkingWord1.0-ejb\src\main\java\com\mycompany\dao\TipoComprobanteFacadeLocal.java
