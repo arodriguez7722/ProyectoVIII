@@ -93,7 +93,162 @@
 
 
     <ui:define name="body">           
-        
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="frmCrearPerqueadero" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Sede Parqueadero:" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{parqueaderoMB.parqueadero.nombre}" pt:required="true" pt:placeholder="Sede" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Direccion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{parqueaderoMB.parqueadero.direccion}" pt:required="true" pt:placeholder="Direccion" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Telefono" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{parqueaderoMB.parqueadero.telefono}" pt:required="true" pt:placeholder="Telefono" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Numero de Cupos" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{parqueaderoMB.numeroCupos}" pt:required="true" pt:placeholder="NroCupos" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Estado:" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{parqueaderoMB.parqueadero.estado}">
+                                                <f:selectItem itemLabel="Estado" itemValue=""/>
+                                                <f:selectItem itemLabel="Activo" itemValue="Activo"/>
+                                                <f:selectItem itemLabel="Inactivo" itemValue="Inactivo"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <div class="col-sm-4">                                            
+                                            <p:commandButton value="Guardar" id="guardar" update=":frmCrearPerqueadero :tbVerParqueadero" ignoreAutoUpdate="true"
+                                                             actionListener="#{parqueaderoMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":frmCrearPerqueadero " ignoreAutoUpdate="true"
+                                                             actionListener="#{parqueaderoMB.cancel()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                    </div>
+                                </div>   
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="tbVerParqueadero" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Parqueaderos Registrados</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="par" 
+                                         value="#{parqueaderoMB.listaParqueadero}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="10"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->
+
+
+
+                                <p:column headerText="Nombre">
+                                    <h:outputText value="#{par.nombre}"/>
+                                </p:column>
+
+                                <p:column headerText="Direccion">
+                                    <h:outputText value="#{par.direccion}"/>
+                                </p:column>
+                                <p:column headerText="Telefono">
+                                    <h:outputText value="#{par.telefono}"/>
+                                </p:column>
+                                <p:column headerText="NodeCupos">
+                                    <h:outputText value="#{par.numeroCupos}"/>                                
+                                </p:column>
+                                <p:column headerText="Estado">
+                                    <h:outputText value="#{par.estado}"/>                                
+                                </p:column>                                
+                                <p:column headerText="Editar">
+                                    <p:commandButton value="Editar" id="editar" update=":frmCrearPerqueadero" ignoreAutoUpdate="true"
+                                                     ajax="false" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{parqueaderoMB.parqueadero}" value="#{par}"/>
+                                    </p:commandButton>                                
+                                </p:column>
+                                <p:column headerText="Eliminar">
+                                    <p:commandButton value="Eliminar" id="eliminar" update=":frmCrearPerqueadero :tbVerParqueadero" ignoreAutoUpdate="true"
+                                                     action="#{parqueaderoMB.deleteParqueadero()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{parqueaderoMB.parqueadero}" value="#{par}"/>
+                                    </p:commandButton>                               
+                                </p:column>
+                            </p:dataTable>
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
     </ui:define>
 
 </ui:composition>
