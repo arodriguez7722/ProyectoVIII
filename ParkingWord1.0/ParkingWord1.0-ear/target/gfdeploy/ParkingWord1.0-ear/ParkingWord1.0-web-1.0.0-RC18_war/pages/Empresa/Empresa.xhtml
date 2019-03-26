@@ -93,7 +93,180 @@
 
 
     <ui:define name="body">        
-        
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="frmCrearEmpresa" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Razon Social" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{EmpresaMB.empresa.razonSocial}" pt:required="true" pt:placeholder="Nombre" styleClass="text100" />
+                                        </div>
+                                    </div>   
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Nit" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{EmpresaMB.empresa.nit}" pt:required="true" pt:placeholder="Nit" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Direccion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{EmpresaMB.empresa.direccion}" pt:required="true" pt:placeholder="Direccion" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Telefono" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{EmpresaMB.empresa.telefono}" pt:required="true" pt:placeholder="Telefono" styleClass="text100"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Numero de Cupos:" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{EmpresaMB.empresa.numeroCupos}">
+                                                <f:selectItem itemLabel="Nro de Cupos" itemValue=""/>
+                                                <f:selectItem itemLabel="1" itemValue="1"/>
+                                                <f:selectItem itemLabel="2" itemValue="2"/> 
+                                                <f:selectItem itemLabel="3" itemValue="3"/>
+                                                <f:selectItem itemLabel="4" itemValue="4"/>
+                                                <f:selectItem itemLabel="5" itemValue="5"/>
+                                                <f:selectItem itemLabel="6" itemValue="6"/>
+                                                <f:selectItem itemLabel="7" itemValue="7"/>
+                                                <f:selectItem itemLabel="8" itemValue="8"/>
+                                                <f:selectItem itemLabel="9" itemValue="9"/>
+                                                <f:selectItem itemLabel="10" itemValue="10"/>
+                                                <f:selectItem itemLabel="11" itemValue="11"/>
+                                                <f:selectItem itemLabel="12" itemValue="12"/>
+                                                <f:selectItem itemLabel="13" itemValue="13"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 15px; margin-top: 40px">
+                                    <div class="form-group col-sm-6">
+                                        <div class="col-sm-4">                                            
+                                            <p:commandButton value="Guardar" id="guardar" update=":frmCrearEmpresa :tbVerEmpresas" ignoreAutoUpdate="true"
+                                                             actionListener="#{EmpresaMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":frmCrearEmpresa " ignoreAutoUpdate="true"
+                                                             actionListener="#{EmpresaMB.cancel()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="tbVerEmpresas" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Empresas Registradas</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="emp" 
+                                         value="#{EmpresaMB.listaEmpresa}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="10"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->
+
+                                <p:column headerText="Empresa">
+                                    <h:outputText value="#{emp.razonSocial}"/>
+                                </p:column>
+
+                                <p:column headerText="NIT">
+                                    <h:outputText value="#{emp.nit}"/>
+                                </p:column>
+
+                                <p:column headerText="Direccion">
+                                    <h:outputText value="#{emp.direccion}"/>
+                                </p:column>
+                                <p:column headerText="Telefono">
+                                    <h:outputText value="#{emp.telefono}"/>
+                                </p:column>
+                                <p:column headerText="NodeCupos">
+                                    <h:outputText value="#{emp.numeroCupos}"/>                                
+                                </p:column>
+                                <p:column headerText="Detalle">
+                                    <p:commandButton   value="Detalle" styleClass="btn-primary btn-block">
+
+                                    </p:commandButton>
+                                    <h:outputText value=""/>
+                                </p:column>
+                                <p:column headerText="Editar">
+                                    <p:commandButton value="Editar" id="editar" update=":frmCrearEmpresa" ignoreAutoUpdate="true"
+                                                     ajax="false" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{EmpresaMB.empresa}" value="#{emp}"/>
+                                    </p:commandButton>                                
+                                </p:column>
+                                <p:column headerText="Eliminar">
+                                    <p:commandButton value="Eliminar" id="eliminar" update=":frmCrearEmpresa tbVerEmpresas" ignoreAutoUpdate="true"
+                                                     action="#{EmpresaMB.deleteEmpresa()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{EmpresaMB.empresa}" value="#{emp}"/>
+                                    </p:commandButton>                               
+                                </p:column>
+                            </p:dataTable>
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
     </ui:define>
 
 </ui:composition>
