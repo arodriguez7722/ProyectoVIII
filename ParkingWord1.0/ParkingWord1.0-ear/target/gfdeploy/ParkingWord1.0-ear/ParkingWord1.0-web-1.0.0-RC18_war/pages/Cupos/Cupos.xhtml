@@ -93,7 +93,183 @@
 
 
     <ui:define name="body">           
-         
+         <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="frmcrearCupo" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->     
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Nro Cupo" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{cupoMB.cupo.numeroCupo}" pt:required="true" pt:placeholder="Nro Cupo" styleClass="text100" />
+                                        </div>
+                                    </div>   
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Tipo Cupo" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{cupoMB.cupo.idTipoCupo.idTipoCupo}">
+                                                <f:selectItem itemLabel="Tipo Cupo" itemValue=""/>
+                                                <f:selectItems value="#{tipoCupoMB.listaTipoCupo}" var="T" 
+                                                               itemLabel="#{T.tipoCupo}" itemValue="#{T.idTipoCupo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Piso" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{cupoMB.cupo.idPisoCupo.idPisoCupo}">
+                                                <f:selectItem itemLabel="Piso Cupo" itemValue=""/>
+                                                <f:selectItems value="#{pisoCupoMB.listaPisoCupo}" var="P" 
+                                                               itemLabel="#{P.pisoCupo}" itemValue="#{P.idPisoCupo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Medidas" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{cupoMB.cupo.idMedidasCupo.idMedidasCupo}">
+                                                <f:selectItem itemLabel="Mdidas Cupo" itemValue=""/>
+                                                <f:selectItems value="#{medidasCupoMB.listaMedidasCupo}" var="M" 
+                                                               itemLabel="#{M.medidasCupo}" itemValue="#{M.idMedidasCupo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Estado" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{cupoMB.cupo.estado}">
+                                                <f:selectItem itemLabel="Estado" itemValue=""/>
+                                                <f:selectItem itemLabel="Activo" itemValue="Activo"/>
+                                                <f:selectItem itemLabel="Inactivo" itemValue="Inactivo"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-bottom: 15px; margin-top: 40px">
+                                    <div class="form-group col-sm-6">
+                                        <div class="col-sm-4"> 
+                                            <h:commandButton value="Guardar" id="guardar"
+                                                             actionListener="#{cupoMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+                                            <!--
+                                            <p:commandButton value="Guardar" id="guardar" update=":frmcrearCupo :tbverCupos" ignoreAutoUpdate="true"
+                                                             actionListener="{cupoMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+                                            -->
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":frmcrearCupo " ignoreAutoUpdate="true"
+                                                             actionListener="#{cupoMB.cancel()}" styleClass="btn-primary btn-block"/>
+
+                                        </div>
+                                    </div>
+                                </div>                        
+
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="tbverCupos" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Cupos Registrados</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="cup" 
+                                         value="#{cupoMB.listaCupo}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="10"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->
+
+
+                                <p:column styleClass="align-center" priority="1"
+                                          headerText="Nro Cupo">
+                                    <h:outputText value="#{cup.numeroCupo}"/>
+                                </p:column>
+
+                                <p:column styleClass="align-center" priority="2"
+                                          headerText="Piso">
+                                    <h:outputText value="#{cup.idPisoCupo.pisoCupo}"/>
+                                </p:column>
+
+                                <p:column styleClass="align-center" priority="3" 
+                                          headerText="Medidas">
+                                    <h:outputText value="#{cup.idMedidasCupo.medidasCupo}"/>
+                                </p:column>
+
+                                <p:column styleClass="align-center" priority="4"
+                                          headerText="Estado">
+                                    <h:outputText value="#{cup.estado}"/>
+                                </p:column>
+
+                                <p:column headerText="Editar">
+                                    <p:commandButton value="Editar" id="editar" update=":frmcrearCupo" ignoreAutoUpdate="true"
+                                                     ajax="false" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{cupoMB.cupo}" value="#{cup}"/>
+                                    </p:commandButton>                                
+                                </p:column>
+                                <p:column headerText="Eliminar">
+                                    <p:commandButton value="Eliminar" id="eliminar" update=":frmcrearCupo :tbverCupos" ignoreAutoUpdate="true"
+                                                     action="#{cupoMB.deleteCupo()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{cupoMB}" value="#{cup}"/>
+                                    </p:commandButton>                               
+                                </p:column>
+
+                            </p:dataTable>
+
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
     </ui:define>
 
 </ui:composition>
