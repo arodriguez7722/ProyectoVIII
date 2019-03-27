@@ -93,7 +93,152 @@
 
     
     <ui:define name="body">           
-          
+          <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="frmCrearConvenios" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Nombre" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{conveniosMB.convenio.nombre}" pt:required="true" pt:placeholder="Nombre" styleClass="text100" />
+                                        </div>
+                                    </div>   
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Descuento" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{conveniosMB.convenio.descuento}" pt:required="true" pt:placeholder="Descuento" styleClass="text100" />
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Empresa" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{conveniosMB.convenio.empresa}" pt:required="true" pt:placeholder="Empresa" styleClass="text100"/>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Estado:" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu style="width: 100%; height: 33px" value="#{conveniosMB.convenio.estado}">
+                                                <f:selectItem itemLabel="Estado" />
+                                                <f:selectItem itemLabel="Activo" itemValue="Activo"/>
+                                                <f:selectItem itemLabel="Inactivo" itemValue="Inactivo"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px; margin-top: 40px"></div>
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Guardar" id="guardar" update=":frmCrearConvenios :tbVerConvenio" ignoreAutoUpdate="true"
+                                                             actionListener="#{conveniosMB.saveOrUpdate()}" styleClass="btn-primary btn-block"/>
+                                            
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":frmCrearConvenios " ignoreAutoUpdate="true"
+                                                             actionListener="#{conveniosMB.cancel()}" styleClass="btn-primary btn-block"/>
+                                            
+                                        </div>
+                                    </div>
+                                </div>  
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="tbVerConvenio" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Convenios Registrados</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="conv" 
+                                         value="#{conveniosMB.listaConvenio}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="10"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->
+                                
+                                <p:column  headerText="Nombre">
+                                    <h:outputText value="#{conv.nombre}"/>
+                            </p:column>
+
+                            <p:column  headerText="Descuento">
+                                <h:outputText value="#{conv.descuento}"/>
+                            </p:column>
+
+                            <p:column  headerText="Empresa">
+                                <h:outputText value="#{conv.empresa}"/>
+                            </p:column>
+                            <p:column  headerText="Estado">
+                                <h:outputText value="#{conv.estado}"/>
+                            </p:column>
+                            <p:column  headerText="Editar">
+                                <p:commandButton value="Editar" id="editar" update=":frmCrearConvenios " ignoreAutoUpdate="true"
+                                                     ajax="false" styleClass="btn-primary btn-block">
+                                    <f:setPropertyActionListener  target="#{conveniosMB.convenio}" value="#{conv}"/>
+                                    </p:commandButton>                              
+                            </p:column>
+                            <p:column headerText="Eliminar">
+                                <p:commandButton value="Eliminar" id="eliminar" update=":frmCrearConvenios :tbVerConvenio" ignoreAutoUpdate="true"
+                                                 action="#{conveniosMB.deleteConvenio()}" styleClass="btn-primary btn-block">
+                                    <f:setPropertyActionListener  target="#{conveniosMB.convenio}" value="#{conv}"/>
+                                    </p:commandButton>                          
+                            </p:column>
+                        </p:dataTable>
+                            <!--INICIO DE MODIFICACION -->
+                        <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION --> 
+                           
+                    </h:form>
+                </div>
+            </div>
+        </div>
     </ui:define>
     
 </ui:composition>
