@@ -93,7 +93,372 @@
 
 
     <ui:define name="body">        
-       
+       <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="frmCrearVehiculo" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION -->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px">
+                                <div class="navbar-brand">Datos Generales</div>
+                            </div>
+                            <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                            <div  class="form-group col-sm-12">
+                                <!--FIN DE MODIFICACION -->
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Parqueadero" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu   style="width: 100%; height: 33px" value="#{vehiculoMB.vehiculo.idParqueadero.idParqueadero}">                                               
+                                                <f:selectItems value="#{parqueaderoMB.listaParqueadero}" var="par" 
+                                                               itemLabel="#{par.nombre}" itemValue="#{par.idParqueadero}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Placa" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:inputText value="#{vehiculoMB.vehiculo.placa}" pt:required="true" pt:placeholder="Placa" styleClass="text100" />
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Tipo Vehiculo" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{vehiculoMB.vehiculo.idTipoVehiculo.idtipoVehiculo}">
+                                                <f:selectItem itemLabel="Tipo Vehiculo" itemValue=""/>
+                                                <f:selectItems value="#{tipoVehiculoMB.listaTipoVehiculo}" var="TV" 
+                                                               itemLabel="#{TV.tipoVehiculo}" itemValue="#{TV.idtipoVehiculo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Marca" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{vehiculoMB.vehiculo.idMarcaVehiculo.idmarcaVehiculo}">
+                                                <f:selectItem itemLabel="Marca Vehiculo" itemValue=""/>
+                                                <f:selectItems value="#{marcaVehiculoMB.listaMarcaVehiculo}" var="MV" 
+                                                               itemLabel="#{MV.marcaVehiculo}" itemValue="#{MV.idmarcaVehiculo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Modelo" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{vehiculoMB.vehiculo.idModeloVehiculo.idModeloVehiculo}">
+                                                <f:selectItem itemLabel="Modelo Vehiculo" itemValue=""/>
+                                                <f:selectItems value="#{modeloVehiculoMB.listaModeloVehiculo}" var="MOV" 
+                                                               itemLabel="#{MOV.modeloVehiculo}" itemValue="#{MOV.idModeloVehiculo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Color" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <h:selectOneMenu  style="width: 100%; height: 33px" value="#{vehiculoMB.vehiculo.idColorVehiculo.idColorVehiculo}">
+                                                <f:selectItem itemLabel="Color Vehiculo" itemValue=""/>
+                                                <f:selectItems value="#{colorVehiculoMB.listaColorVehiculo}" var="CV" 
+                                                               itemLabel="#{CV.colorVehiculo}" itemValue="#{CV.idColorVehiculo}"/>                                     
+                                            </h:selectOneMenu>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6">
+                                        <p:outputLabel value="Identificacion" styleClass="control-label col-sm-5" />
+                                        <div class="col-sm-7">
+                                            <p:autoComplete id="ac" value="#{vehiculoMB.identificacion}"  completeMethod="#{personaMB.completeText}" pt:required="true" pt:placeholder="Identificacion" styleClass="text100" dropdown="true"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row" style="margin-bottom: 15px; margin-top: 40px">
+                                    <div class="form-group col-sm-6" >
+                                        <div class="col-sm-4">                                            
+                                            <p:commandButton value="Guardar" id="guardar" update=":frmCrearVehiculo :tbverVehiculos" ignoreAutoUpdate="true"
+                                                             actionListener="#{vehiculoMB.saveOrUpdate()}" styleClass="btn-primary btn-block">
+                                                <p:confirm  header="Guardar Vehiculo" message="Desea Guardar Vehiculo al Cliente" icon="ui-icon-alert"/>
+                                            </p:commandButton>
+
+
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <p:commandButton value="Cancelar" id="cancelar" update=":frmCrearVehiculo " ignoreAutoUpdate="true"
+                                                             actionListener="#{vehiculoMB.cancel()}" styleClass="btn-primary btn-block">
+                                                <p:confirm  header="Calcelar" message="Desea Cancelar la transaccion?" icon="ui-icon-alert"/>
+                                            </p:commandButton>
+
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!--INICIO DE MODIFICACION -->
+                                <!--CREACION DE DOS <div> DE CIERRE-->
+                            </div>
+                        </div>
+                        <!--FIN DE MODIFICACION --> 
+
+                        <p:dialog header="Valida Cliente" widgetVar="dlgValidaCliente" resizable="false" draggable="false" appendTo="@(body)" responsive="true" width="400"
+                                  modal="true" styleClass="dialog-login" style="background: #F39C12;  ">
+                            <p:outputLabel style="color: #FFFFFF" value="Cliente no Registrado ¿Desea Registrarlo? "/>
+                            <p:separator/>
+                            
+                            <p:commandButton value="Si" id="si"  ignoreAutoUpdate="true"
+                                             actionListener="#{vehiculoMB.crearClienteDiario()}" 
+                                             process="@form"
+                                             style="background-color: #F39C12;color: #FFFFFF "
+                                             styleClass="btn btn-outline pull-left"
+                                             onclick="PF('dlgValidaCliente').hide();"
+                                             >                                             
+                            </p:commandButton>
+
+                            <p:commandButton value="No" id="no" update=":frmCrearVehiculo " ignoreAutoUpdate="true"
+                                             actionListener="#{vehiculoMB.cancel()}"
+                                             process="@form"
+                                             style="background-color: #F39C12;color: #FFFFFF "
+                                             styleClass="btn btn-outline pull-right"
+                                             onclick="PF('dlgValidaCliente').hide();">
+                            </p:commandButton>
+                        </p:dialog>
+
+                     </h:form>
+                </div>
+            </div>
+        </div>
+        
+
+        <p:dialog header="Registrar Cliente"  widgetVar="dlgRegistrarCliente" resizable="false" draggable="false" appendTo="@(body)" responsive="true" width="500" 
+                  modal="true" style="background: #00A7D0;  ">
+            <div class="container" style="width: 100%;  ">
+                <div class="row" >
+                    <div >
+                        <h:form id="frmCrearCliente" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                            <!--INICIO DE MODIFICACION -->
+                            <p:growl/>
+                            <p:messages closable="true"/>
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                            <div class="navbar navbar-inverse " style="margin-top: 20px;background-color: #00A7D0 ;color: #FFFFFF"  >
+
+                                <!--INICIO DE CAMPOS DEL FORMULARIO -->
+                                <div  class="form-group col-sm-12">
+                                    <!--FIN DE MODIFICACION -->
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <p:outputLabel value="Tipo de Documento" styleClass="control-label col-sm-5" />
+                                            <div class="col-sm-7">
+                                                <p:selectOneMenu   style="width: 100%; height: 33px;background-color: #00A7D0;color: #FFFFFF" value="#{clientesMB.cliente.persona.idTipoDocPersona.idTipoDocPersona}">
+                                                    <f:selectItems value="#{tipoDocumentoMB.listaTipoDoc}" var="TDoc" 
+                                                                   itemLabel="#{TDoc.tipoDocumento}" itemValue="#{TDoc.idTipoDocPersona}"/>                                     
+                                                </p:selectOneMenu>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <div class="row" >
+                                        <div class="form-group col-sm-12" >                                    
+                                            <p:outputLabel value="Identificacion" styleClass="control-label col-sm-5" />                                    
+                                            <div class="col-sm-7">
+                                                <p:inputText style="background-color: #00A7D0; color: #FFFFFF" value="#{clientesMB.cliente.persona.identificacion}" pt:required="true" pt:placeholder="Identificacion" styleClass="text100"/>
+
+                                            </div>
+                                        </div> 
+                                    </div>
+
+                                    <div class="row" >
+                                        <div class="form-group col-sm-12" >                                    
+                                            <p:outputLabel value="Nombres" styleClass="control-label col-sm-5" />                                    
+                                            <div class="col-sm-7">
+                                                <p:inputText style="background-color: #00A7D0; color: #FFFFFF" value="#{clientesMB.cliente.persona.nombres}" pt:required="true" pt:placeholder="Nombres" styleClass="text100"/>
+
+                                            </div>
+                                        </div> 
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <p:outputLabel value="Lugar de Nacimiento" styleClass="control-label col-sm-5" />
+                                            <div class="col-sm-7">
+                                                <p:selectOneMenu style="width: 100%; height: 33px;background-color: #00A7D0;color: #FFFFFF" value="#{clientesMB.cliente.persona.idLugarNacPersona.idLugarNacPersona}">
+
+                                                    <f:selectItems value="#{lugarNacimientoMB.listaLugarNac}" var="LNac" 
+                                                                   itemLabel="#{LNac.lugarNacimiento}" itemValue="#{LNac.idLugarNacPersona}"/>                                     
+                                                </p:selectOneMenu>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                     
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <p:outputLabel value="Estado" styleClass="control-label col-sm-5" />
+                                            <div class="col-sm-7">
+                                                <p:selectOneMenu style="width: 100%; height: 33px;background-color: #00A7D0;color: #FFFFFF" value="#{clientesMB.cliente.persona.estado}">                                                    
+                                                    <f:selectItem itemLabel="Activo" itemValue="Activo"/>
+                                                    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo"/>
+                                                </p:selectOneMenu>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <p:outputLabel  value="Codigo Cliente" styleClass="control-label col-sm-5" />
+                                            <div class="col-sm-7">
+                                                <p:inputText style="background-color: #00A7D0; color: #FFFFFF;color: #FFFFFF" value="#{clientesMB.cliente.codigoCliente}" pt:required="true" pt:placeholder="Codigo Cliente" styleClass="text100" />
+                                            </div>
+                                        </div>  
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <p:outputLabel value="Tipo Cliente" styleClass="control-label col-sm-5" />
+                                            <div class="col-sm-7">
+                                                <p:selectOneMenu style="width: 100%; height: 33px;background-color: #00A7D0;color: #FFFFFF" value="#{clientesMB.cliente.tipoCliente}">                                                    
+                                                    <f:selectItem itemLabel="Diario" itemValue="Diario"/>
+                                                    <f:selectItem itemLabel="Mensual" itemValue="Mensual"/>
+                                                </p:selectOneMenu>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <p:outputLabel value="Empresa" styleClass="control-label col-sm-5" />
+                                            <div class="col-sm-7">
+                                                <p:selectOneMenu style="width: 100%; height: 33px;background-color: #00A7D0; color: #FFFFFF" value="#{clientesMB.cliente.idEmpresa.idEmpresa}">                                                    
+                                                    <f:selectItems value="#{EmpresaMB.listaEmpresa}" var="emp" 
+                                                                   itemLabel="#{emp.razonSocial}" itemValue="#{emp.idEmpresa}"/>                                     
+                                                </p:selectOneMenu>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                    <!--INICIO DE MODIFICACION -->
+                                    <!--CREACION DE DOS <div> DE CIERRE-->
+                                </div>
+                            </div>
+                            <!--FIN DE MODIFICACION -->
+
+                            <p:separator/>                            
+                            <p:commandButton styleClass=" btn btn-outline pull-left" value="Guardar" 
+                                             actionListener="#{clientesMB.saveOrUpdate()}" 
+                                             process="@form"
+                                             style="background-color: #00A7D0;color: #FFFFFF "
+                                             ignoreAutoUpdate="true"
+                                             onclick="PF('dlgRegistrarCliente').hide();"
+                                             /> 
+                            <p:commandButton value="Cancelar" id="can" update=":frmCrearVehiculo " ignoreAutoUpdate="true"
+                                             actionListener="#{vehiculoMB.cancel()}" 
+                                             process="@this"
+                                             style="background-color: #00A7D0;color: #FFFFFF "
+                                             styleClass=" btn btn-outline pull-right"
+                                             onclick="PF('dlgRegistrarCliente').hide();"
+                                             >
+                            </p:commandButton>
+                        </h:form>                     
+                    </div>
+                </div>
+            </div>
+        </p:dialog>
+        
+        
+        <h:form id="frmComfirm">
+            <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" styleClass="box-solid box-danger">
+                <p:commandButton value="Aceptar" type="button" styleClass="btn-material btn-primary ui-confirmdialog-yes"
+                                 icon="fa fa-check"/>
+                <p:commandButton value="Cancelar" type="button" styleClass="btn-material btn-danger ui-confirmdialog-no"
+                                 icon="fa fa-close"/>
+            </p:confirmDialog>            
+        </h:form>
+        
+        
+        <div class="container" style="width: 98%">
+            <div class="row">
+                <div>
+                    <h:form id="tbverVehiculos" styleClass="form-horizontal" enctype="multipart/form-data" class="col-xs-12 ">
+                        <!--INICIO DE MODIFICACION TABLA-->
+                        <!--CONTENEDOR DIV QUE SEPARA LOS FORMULARIOS DE MANERA INDEPENDIENTE CON FONDO BLACO -->
+                        <div class="navbar navbar-inverse " style="margin-top: 15px" >
+                            <!--DIV DE TITULO CON FONDO NEGRO -->
+                            <div class="navbar navbar-titulo "  style="margin:8px 8px 70px 8px"  >
+                                <div class="navbar-brand">Vehiculos Registrados</div>
+                            </div>
+                            <!--TABLA DE DATOS PRINCIPAL CON MAS PROPIEDADES AÑADIDAS -->
+                            <p:dataTable style="margin:0px 30px 30px 30px"  
+                                         id="boxTable" 
+                                         var="V" 
+                                         value="#{vehiculoMB.listaVehiculo}" 
+                                         paginator="true" 
+                                         paginatorPosition="bottom"
+                                         reflow="true"
+                                         styleClass="box-solid box-primary"
+                                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                         rowsPerPageTemplate="5,10,15" rows="10"
+                                         emptyMessage="No cars found with given criteria"
+                                         >
+                                <!--CABECERA O HEADER DE LA TABLA CON SU RESPECTIVO TITULO "Tabla Principal" -->
+                                <f:facet name="header">
+                                    <h:outputText value="Tabla Principal"/>
+                                </f:facet>                                
+                                <!--PIE DE PAGINA O FOOTER DE LA TABLA QUE MUESTRA EL FIN -->
+                                <f:facet name="footer">
+                                    <h:outputText value="Fin de Tabla"/>
+                                </f:facet>
+                                <!--COLUMNAS CON MAS PROPIEDADES PARA CENTRAR EL CONTENIDO -->
+                                <!--FIN DE MODIFICACION TABLA-->
+                                <p:column headerText="Placa">
+                                    <h:outputText value="#{V.placa}"/>
+                                </p:column>
+
+                                <p:column headerText="Tipo Vehiculo">
+                                    <h:outputText value="#{V.idTipoVehiculo.tipoVehiculo}"/>
+                                </p:column>
+
+                                <p:column headerText="Marca">
+                                    <h:outputText value="#{V.idMarcaVehiculo.marcaVehiculo}"/>
+                                </p:column>
+                                <p:column headerText="Modelo">
+                                    <h:outputText value="#{V.idModeloVehiculo.modeloVehiculo}"/>
+                                </p:column>
+                                <p:column headerText="Identificacion">
+                                    <h:outputText value="#{V.idPersona.identificacion}"/>                                
+                                </p:column>                            
+                                <p:column headerText="Editar">
+                                    <p:commandButton value="Editar" actionListener="#{vehiculoMB.recuperaValorIdEditando(V)}" id="editar" update=":frmCrearVehiculo" ignoreAutoUpdate="true"
+                                                     styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{vehiculoMB.vehiculo}" value="#{V}"/>
+                                    </p:commandButton>                                
+                                </p:column>
+                                <p:column headerText="Eliminar">
+                                    <p:commandButton value="Eliminar" id="eliminar" update=":frmCrearVehiculo :tbverVehiculos" ignoreAutoUpdate="true"
+                                                     action="#{vehiculoMB.deleteVehiculo()}" styleClass="btn-primary btn-block">
+                                        <f:setPropertyActionListener  target="#{vehiculoMB.vehiculo}" value="#{V}"/>
+                                        <p:confirm  header="Eliminar Vehiculo" message="Desea Eliminar Vehiculo al Cliente identificado con cedula #{V.idPersona.identificacion}?" icon="ui-icon-alert"/>
+                                    </p:commandButton>                               
+                                </p:column>
+                            </p:dataTable>
+                            <!--INICIO DE MODIFICACION -->
+                            <!--CREACION DE UN <div> DE CIERRE-->
+                        </div>
+                        <!--FIN DE MODIFICACION -->
+                    </h:form>
+                </div>
+            </div>
+        </div>
     </ui:define>
 
 </ui:composition>
